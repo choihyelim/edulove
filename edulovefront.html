@@ -1,0 +1,873 @@
+
+<!-- <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> -->
+<html>
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132981429-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-132981429-1');
+</script>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>관리자메인</title>
+<link rel="stylesheet" href="../css/style.css" type="text/css">
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" />
+<!-- <meta http-equiv="page-enter" content="blendtrans(duration=0.3)"/>
+<meta http-equiv="page-exit" content="blendtrans(duration=0.3)"/> -->
+<META http-equiv="imagetoolbar" content="no">
+<script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/3685B90B-803B-6E4A-A48F-FCE9C802AD91/main.js" charset="UTF-8"></script></head>
+<script type="text/javascript">
+function bookmarksite(title,url){
+if (window.sidebar) // firefox
+window.sidebar.addPanel(title, url, "");
+else if(window.opera && window.print){ // opera
+var elem = document.createElement('a');
+elem.setAttribute('href',url);
+elem.setAttribute('title',title);
+elem.setAttribute('rel','sidebar');
+elem.click();
+}
+else if(document.all)// ie
+window.external.addFavorite(url, title);
+}
+</script>
+<script language="javascript">
+// 자바스크립트에서 사용하는 전역변수 선언
+var g4_path      = "..";
+var g4_bbs       = "bbs";
+var g4_bbs_img   = "img";
+var g4_url       = "http://www.edulove.co.kr";
+var g4_is_member = "1";
+var g4_is_admin  = "super";
+var g4_bo_table  = "";
+var g4_sca       = "";
+var g4_charset   = "euc-kr";
+var g4_cookie_domain = "";
+var g4_is_gecko  = navigator.userAgent.toLowerCase().indexOf("gecko") != -1;
+var g4_is_ie     = navigator.userAgent.toLowerCase().indexOf("msie") != -1;
+var g4_admin = 'adm_re';</script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="../js/popupLayer.js"></script>
+<script type="text/javascript" src="../js/swf.js"></script>
+<script type="text/javascript" src="../js/init.js"></script>
+<!--<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>-->
+<script type="text/javascript" src="../js/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script>
+	function comView(flag1,flag)
+	{
+		for(i=1;i<5;i++)
+		{
+			if(document.all(flag1+i))
+			{
+				document.all(flag1+i).style.display='none';
+				document.all(flag1+i+'_img').src='../img//'+flag1+'_menu0'+i+'_off.gif'
+			}
+		}
+
+		document.all(flag1+flag).style.display='';
+		document.all(flag1+flag+'_img').src='../img//'+flag1+'_menu0'+flag+'_on.gif'
+	}
+	function MM_openBrWindow(theURL,winName,features) { //v2.0
+					window.open(theURL,winName,features);
+				}
+</script>
+<body id="body" topmargin="0" leftmargin="0" >
+<div id="overlay" style="display:none;"></div>
+<a name="g4_head"></a>
+<table border=0 cellpadding=0 cellspacing=0 width=100%>
+	<tr>
+		<td align=center>
+<script language="JavaScript">
+if (!g4_is_ie) document.captureEvents(Event.MOUSEMOVE)
+    document.onmousemove = getMouseXY;
+var tempX = 0;
+var tempY = 0;
+var prevdiv = null;
+var timerID = null;
+
+function getMouseXY(e)
+{
+    if (g4_is_ie) {
+        // grab the x-y pos.s if browser is IE
+        tempX = event.clientX + document.body.scrollLeft;
+        tempY = event.clientY + document.body.scrollTop;
+    }
+    else {
+        // grab the x-y pos.s if browser is NS
+        tempX = e.pageX;
+        tempY = e.pageY;
+    }
+
+    if (tempX < 0) {
+        tempX = 0;
+    }
+    if (tempY < 0) {
+        tempY = 0;
+    }
+
+    return true;
+}
+
+function imageview(id, w, h)
+{
+
+    menu(id);
+
+    var el_id = document.getElementById(id);
+
+    //submenu = eval(name+".style");
+    submenu = el_id.style;
+    submenu.left = tempX - ( w + 11 );
+    submenu.top  = tempY - ( h / 2 );
+
+    selectBoxVisible();
+
+    if (el_id.style.display != 'none')
+        selectBoxHidden(id);
+}
+
+function help(id, left, top)
+{
+    menu(id);
+
+    var el_id = document.getElementById(id);
+
+    //submenu = eval(name+".style");
+    submenu = el_id.style;
+    submenu.left = tempX - 50 + left;
+    submenu.top  = tempY + 15 + top;
+
+    selectBoxVisible();
+
+    if (el_id.style.display != 'none')
+        selectBoxHidden(id);
+}
+
+// TEXTAREA 사이즈 변경
+function textarea_size(fld, size)
+{
+    var rows = parseInt(fld.rows);
+
+    rows += parseInt(size);
+    if (rows > 0) {
+        fld.rows = rows;
+    }
+}
+</script>
+..<script language="javascript" src="../js/common.js"></script>
+<script language="javascript" src="../js/sideview.js"></script>
+<script language="JavaScript">
+var save_layer = null;
+function layer_view(link_id, menu_id, opt, x, y)
+{
+    var link = document.getElementById(link_id);
+    var menu = document.getElementById(menu_id);
+
+    //for (i in link) { document.write(i + '<br/>'); } return;
+
+    if (save_layer != null)
+    {
+        save_layer.style.display = "none";
+        selectBoxVisible();
+    }
+
+    if (link_id == '')
+        return;
+
+    if (opt == 'hide')
+    {
+        menu.style.display = 'none';
+        selectBoxVisible();
+    }
+    else
+    {
+        x = parseInt(x);
+        y = parseInt(y);
+        menu.style.left = get_left_pos(link) + x;
+        menu.style.top  = get_top_pos(link) + link.offsetHeight + y;
+        menu.style.display = 'block';
+    }
+
+    save_layer = menu;
+}
+</script>
+
+<link rel="stylesheet" href="../adm_re/admin.style.css" type="text/css">
+<style>
+.bg_menu1 { height:22px;
+            padding-left:15px;
+            padding-right:15px; }
+.bg_line1 { height:1px; background-color:#EDF0F1; }
+
+.bg_menu2 { height:22px;
+            padding-left:25px; }
+.bg_line2 { background-image:url('../adm_re/img/dot.gif'); height:3px; }
+.dot {color:#D6D0C8;border-style:dotted;}
+
+#csshelp1 { border:0px; background:#FFFFFF; padding:6px; }
+#csshelp2 { border:2px solid #BDBEC6; padding:0px; }
+#csshelp3 { background:#F9F9F9; padding:6px; width:200px; color:#222222; line-height:120%; text-align:left; }
+</style>
+<body>
+<a name='gnuboard4_admin_head'></a>
+<table width="100%" cellpadding=0 cellspacing=0 border=0>
+<colgroup width="180">
+<colgroup width="*">
+<tr bgcolor=#E3DCD2 height=70>
+  <td colspan=2 onmouseover="layer_view('','','','','')"><a href='../adm_re/'><img src='../adm_re/img/logo.gif' border=0></a></td>
+  <td>
+    <img src='../adm_re/img/menu100.gif' border=0 id='id_menu100' onmouseover="layer_view('id_menu100', 'menu_menu100', 'view', -2, 5);">&nbsp; <table width=200 cellpadding=1 cellspacing=0 id='menu_menu100' style='position:absolute; display:none; z-index:1;' onpropertychange="selectBoxHidden('menu_menu100')"><colgroup><colgroup><colgroup width=10><tr><td rowspan=2 colspan=2 bgcolor=#EFCA95><table width=197 cellpadding=0 cellspacing=0 bgcolor=#FEF8F0><colgroup style='padding-left:10px'><tr><td class=bg_menu1><b><a href='../adm_re/config_form.php' style='color:#555500;'>기본환경설정</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/auth_list.php' style='color:#555500;'>관리권한설정</a></b></td></tr><tr><td class=bg_line1></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/db_status.php' style='color:#555500;'>DB 상태</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/repair.php' style='color:#555500;'>DB 복구/최적화</a></b></td></tr><tr><td class=bg_line1></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/session_delete.php' style='color:#555500;'>세션 삭제</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/index_s.php' style='color:#555500;'>검색어분석기</a></b></td></tr><tr><td class=bg_line1></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/sendmail_test.php' style='color:#555500;'>메일점검 테스트</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/popup_list.php' style='color:#555500;'>팝업 관리</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/banner_list.php' style='color:#555500;'>배너 관리</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/main_setting.php' style='color:#555500;'>메인설정 관리</a></b></td></tr></table></td><td></td></tr><tr><td bgcolor=#DDDAD5 height=40></td></tr><tr><td width=4></td><td height=3 width=197 bgcolor=#DDDAD5></td><td bgcolor=#DDDAD5></td></tr></table>
+<img src='../adm_re/img/menu200.gif' border=0 id='id_menu200' onmouseover="layer_view('id_menu200', 'menu_menu200', 'view', -2, 5);">&nbsp; <table width=200 cellpadding=1 cellspacing=0 id='menu_menu200' style='position:absolute; display:none; z-index:1;' onpropertychange="selectBoxHidden('menu_menu200')"><colgroup><colgroup><colgroup width=10><tr><td rowspan=2 colspan=2 bgcolor=#EFCA95><table width=197 cellpadding=0 cellspacing=0 bgcolor=#FEF8F0><colgroup style='padding-left:10px'><tr><td class=bg_menu1><b><a href='../adm_re/board_list.php' style='color:#555500;'>게시판관리</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/boardgroup_list.php' style='color:#555500;'>게시판 그룹관리</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/notice_total.php' style='color:#555500;'>게시판 통합관리</a></b></td></tr><tr><td class=bg_line1></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/notice_list.php' style='color:#555500;'>전체 공지사항</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/cyber_list.php' style='color:#555500;'>강의 공지사항</a></b></td></tr><tr><td class=bg_line1></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/cyber_pds.php' style='color:#555500;'>학습 자료실</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/cyber_free.php' style='color:#555500;'>자유 게시판</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/admin_qna.php' style='color:#555500;'>묻고답하기</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/admin_edumall_qna.php' style='color:#555500;'>에듀몰문의하기</a></b></td></tr><tr><td class=bg_line1></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/class_delay.php' style='color:#555500;'>수강연기</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/propess_pds.php' style='color:#555500;'>교수자게시판</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/class_cancel.php' style='color:#555500;'>수강취소</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/_menu_area.php' style='color:#555500;'>메뉴순서 관리</a></b></td></tr></table></td><td></td></tr><tr><td bgcolor=#DDDAD5 height=40></td></tr><tr><td width=4></td><td height=3 width=197 bgcolor=#DDDAD5></td><td bgcolor=#DDDAD5></td></tr></table>
+<img src='../adm_re/img/menu300.gif' border=0 id='id_menu300' onmouseover="layer_view('id_menu300', 'menu_menu300', 'view', -2, 5);">&nbsp; <table width=200 cellpadding=1 cellspacing=0 id='menu_menu300' style='position:absolute; display:none; z-index:1;' onpropertychange="selectBoxHidden('menu_menu300')"><colgroup><colgroup><colgroup width=10><tr><td rowspan=2 colspan=2 bgcolor=#EFCA95><table width=197 cellpadding=0 cellspacing=0 bgcolor=#FEF8F0><colgroup style='padding-left:10px'><tr><td class=bg_menu1><b><a href='../adm_re/member_list.php' style='color:#555500;'>회원관리</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/tuter_manager.php' style='color:#555500;'>튜터관리</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/point_list.php' style='color:#555500;'>포인트관리</a></b></td></tr><tr><td class=bg_line1></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/school_insert.php' style='color:#555500;'>학교목록관리</a></b></td></tr><tr><td class=bg_line1></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/school_exc_insert_list.php' style='color:#555500;'>학교엑셀등록</a></b></td></tr><tr><td class=bg_line1></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/mail_list.php' style='color:#555500;'>회원메일발송</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/mail_list_differ.php' style='color:#555500;'>비회원메일발송</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/tuter_mail_list2.php' style='color:#555500;'>튜터메일발송</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/mail_list2.php' style='color:#555500;'>개인메일발송</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/memo.php' style='color:#555500;'>쪽지보내기</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/login_ip_list.php' style='color:#555500;'>회원 접속IP 이력</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/talk_message_list.php' style='color:#555500;'>알림톡 발송</a></b></td></tr><tr><td class=bg_line1></td></tr></table></td><td></td></tr><tr><td bgcolor=#DDDAD5 height=40></td></tr><tr><td width=4></td><td height=3 width=197 bgcolor=#DDDAD5></td><td bgcolor=#DDDAD5></td></tr></table>
+<a href='#'><img src='../adm_re/img/menu350.gif' border=0 id='id_menu350' onmouseover="layer_view('id_menu350', 'menu_menu350', 'view', -2, 5);"></a>&nbsp; <table width=200 cellpadding=1 cellspacing=0 id='menu_menu350' style='position:absolute; display:none; z-index:1;' onpropertychange="selectBoxHidden('menu_menu350')"><colgroup><colgroup><colgroup width=10><tr><td rowspan=2 colspan=2 bgcolor=#EFCA95><table width=197 cellpadding=0 cellspacing=0 bgcolor=#FEF8F0><colgroup style='padding-left:10px'><tr><td class=bg_menu1><b><a href='../adm_re/tuter_info.php' style='color:#555500;'>튜터지침사항</a></b></td></tr><tr><td class=bg_line1></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/cyber_list.php' style='color:#555500;'>강의 공지사항</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/cyber_pds.php' style='color:#555500;'>학습 자료실</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/cyber_free.php' style='color:#555500;'>자유 게시판</a></b></td></tr><tr><td class=bg_line1></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/mail_list_tuter.php' style='color:#555500;'>튜터메일발송</a></b></td></tr><tr><td class=bg_line1></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/gisuLecture_tuter.php' style='color:#555500;'>수강관리(직무)</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/menu05_003_exam_tuter.php' style='color:#555500;'>시험관리</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/menu05_003_report_tuter.php' style='color:#555500;'>과제관리</a></b></td></tr><tr><td class=bg_line1></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/result_search_tuter.php' style='color:#555500;'>개인별성적(4학점)</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/result_search_123_tuter.php' style='color:#555500;'>개인별성적(1/2/3학점)</a></b></td></tr></table></td><td></td></tr><tr><td bgcolor=#DDDAD5 height=40></td></tr><tr><td width=4></td><td height=3 width=197 bgcolor=#DDDAD5></td><td bgcolor=#DDDAD5></td></tr></table>
+<img src='../adm_re/img/menu400.gif' border=0 id='id_menu400' onmouseover="layer_view('id_menu400', 'menu_menu400', 'view', -2, 5);">&nbsp; <table width=200 cellpadding=1 cellspacing=0 id='menu_menu400' style='position:absolute; display:none; z-index:1;' onpropertychange="selectBoxHidden('menu_menu400')"><colgroup><colgroup><colgroup width=10><tr><td rowspan=2 colspan=2 bgcolor=#EFCA95><table width=197 cellpadding=0 cellspacing=0 bgcolor=#FEF8F0><colgroup style='padding-left:10px'><tr><td class=bg_menu1><b><a href='../adm_re/menu04_009_new.php' style='color:#555500;'>주문관리(전체) 신규</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/menu04_113.php' style='color:#555500;'>주문관리(2016~17년)</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/menu04_112.php' style='color:#555500;'>주문관리(2015~16년)</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/menu04_111.php' style='color:#555500;'>주문관리(2014~15년)</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/menu04_009.php' style='color:#555500;'>주문관리(전체)</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/menu04_001.php' style='color:#555500;'>주문관리(직무)</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/menu04_mu.php' style='color:#555500;'>무통장미결제내역</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/menu04_002.php' style='color:#555500;'>주문관리(자율)</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/menu04_020.php' style='color:#555500;'>주문관리(키드키즈자율)</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/menu04_960.php' style='color:#555500;'>주문관리(능률교육)</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/menu04_010.php' style='color:#555500;'>주문관리(전문직)</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/menu04_009_vip.php' style='color:#555500;'>주문관리(VIP/연수플러스)</a></b></td></tr><tr><td class=bg_line1></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/menu04_003.php' style='color:#555500;'>주문관리(인권)</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/menu04_500.php' style='color:#555500;'>주문관리(매출용)</a></b></td></tr><tr><td class=bg_line1></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/menu04_004.php' style='color:#555500;'>장바구니</a></b></td></tr><tr><td class=bg_line1></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/menu04_650.php' style='color:#555500;'>이벤트및 교육청단체확인</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/menu04_660.php' style='color:#555500;'>부산교육청(안전)단체확인</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/menu04_670.php' style='color:#555500;'>교육청단체확인(기능개선)</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/menu04_006.php' style='color:#555500;'>단체신청내역</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/pay_analy_edu.php' style='color:#555500;'>과정별수강현황</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/menu04_011_infopay.php' style='color:#555500;'>과정및교재 매출현황</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/menu04_2015_contents.php' style='color:#555500;'>2015 운영현황</a></b></td></tr></table></td><td></td></tr><tr><td bgcolor=#DDDAD5 height=40></td></tr><tr><td width=4></td><td height=3 width=197 bgcolor=#DDDAD5></td><td bgcolor=#DDDAD5></td></tr></table>
+<img src='../adm_re/img/menu500.gif' border=0 id='id_menu500' onmouseover="layer_view('id_menu500', 'menu_menu500', 'view', -2, 5);">&nbsp; <table width=200 cellpadding=1 cellspacing=0 id='menu_menu500' style='position:absolute; display:none; z-index:1;' onpropertychange="selectBoxHidden('menu_menu500')"><colgroup><colgroup><colgroup width=10><tr><td rowspan=2 colspan=2 bgcolor=#EFCA95><table width=197 cellpadding=0 cellspacing=0 bgcolor=#FEF8F0><colgroup style='padding-left:10px'><tr><td class=bg_menu1><b><a href='../adm_re/menu05_010.php' style='color:#555500;'>장바구니추가</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/menu05_004.php' style='color:#555500;'>회원과목추가</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/menu05_011.php' style='color:#555500;'>단체회원과목추가</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/menu05_012.php' style='color:#555500;'>단체회원장바구니추가</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/danche_list_insert.php' style='color:#555500;'>교육청인원추가(필터링)</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/danche_list.php' style='color:#555500;'>교육청인원목록</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/menu05_005.php' style='color:#555500;'>연기자관리</a></b></td></tr><tr><td class=bg_line1></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/menu04_005.php' style='color:#555500;'>교재배송관리</a></b></td></tr><tr><td class=bg_line1></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/manual_session.php' style='color:#555500;'>각종확인서출력</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/group_recruit_list.php' style='color:#555500;'>B2G관리</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/event_member_list.php' style='color:#555500;'>이벤트 신청자 목록</a></b></td></tr></table></td><td></td></tr><tr><td bgcolor=#DDDAD5 height=40></td></tr><tr><td width=4></td><td height=3 width=197 bgcolor=#DDDAD5></td><td bgcolor=#DDDAD5></td></tr></table>
+<img src='../adm_re/img/menu600.gif' border=0 id='id_menu600' onmouseover="layer_view('id_menu600', 'menu_menu600', 'view', -2, 5);">&nbsp; <table width=200 cellpadding=1 cellspacing=0 id='menu_menu600' style='position:absolute; display:none; z-index:1;' onpropertychange="selectBoxHidden('menu_menu600')"><colgroup><colgroup><colgroup width=10><tr><td rowspan=2 colspan=2 bgcolor=#EFCA95><table width=197 cellpadding=0 cellspacing=0 bgcolor=#FEF8F0><colgroup style='padding-left:10px'><tr><td class=bg_menu1><b><a href='../adm_re/menu05_001.php' style='color:#555500;'>수강관리(직무)</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/menu05_001_new.php' style='color:#555500;'>수강관리(직무) - 과정별</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/menu05_002.php' style='color:#555500;'>수강관리(자율)</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/menu05_009.php' style='color:#555500;'>수강관리(국가)</a></b></td></tr><tr><td class=bg_line1></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/jindo_check.php' style='color:#555500;'>진도체크(4학점)</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/check_list.php' style='color:#555500;'>진/과/시 체크</a></b></td></tr><tr><td class=bg_line1></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/result_search.php' style='color:#555500;'>개인별성적(4학점)</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/result_search_123.php' style='color:#555500;'>개인별성적(1/2/3학점)</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/result_search_danche.php' style='color:#555500;'>단체별성적확인</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/online_list.php' style='color:#555500;'>온라인재시험</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/report_list.php' style='color:#555500;'>온라인과제점수</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/menu06_950_jindo.php' style='color:#555500;'>과정별이수율현황</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/study_time_log_list.php' style='color:#555500;'>학습시간 로그</a></b></td></tr></table></td><td></td></tr><tr><td bgcolor=#DDDAD5 height=40></td></tr><tr><td width=4></td><td height=3 width=197 bgcolor=#DDDAD5></td><td bgcolor=#DDDAD5></td></tr></table>
+<img src='../adm_re/img/menu700.gif' border=0 id='id_menu700' onmouseover="layer_view('id_menu700', 'menu_menu700', 'view', -2, 5);">&nbsp; <table width=200 cellpadding=1 cellspacing=0 id='menu_menu700' style='position:absolute; display:none; z-index:1;' onpropertychange="selectBoxHidden('menu_menu700')"><colgroup><colgroup><colgroup width=10><tr><td rowspan=2 colspan=2 bgcolor=#EFCA95><table width=197 cellpadding=0 cellspacing=0 bgcolor=#FEF8F0><colgroup style='padding-left:10px'><tr><td class=bg_menu1><b><a href='../adm_re/code_insert.php' style='color:#555500;'>기수관리</a></b></td></tr><tr><td class=bg_line1></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/edu_create_list.php' style='color:#555500;'>교육청생성</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/dis_office_list.php' style='color:#555500;'>교육청할인등록</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/edu_list.php' style='color:#555500;'>교육청리스트</a></b></td></tr><tr><td class=bg_line1></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/school/school_list.htm' style='color:#555500;'>학교목록</a></b></td></tr><tr><td class=bg_menu1><b><a href='' style='color:#555500;'></a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/edu_list1.php' style='color:#555500;'>교육청등록</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/menu04_670.php' style='color:#555500;'>교육청단체신청확인</a></b></td></tr><tr><td class=bg_menu1><b><a href='' style='color:#555500;'></a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/jindo_list.php' style='color:#555500;'>진도과목수 체크</a></b></td></tr></table></td><td></td></tr><tr><td bgcolor=#DDDAD5 height=40></td></tr><tr><td width=4></td><td height=3 width=197 bgcolor=#DDDAD5></td><td bgcolor=#DDDAD5></td></tr></table>
+<img src='../adm_re/img/menu750.gif' border=0 id='id_menu750' onmouseover="layer_view('id_menu750', 'menu_menu750', 'view', -2, 5);">&nbsp; <table width=200 cellpadding=1 cellspacing=0 id='menu_menu750' style='position:absolute; display:none; z-index:1;' onpropertychange="selectBoxHidden('menu_menu750')"><colgroup><colgroup><colgroup width=10><tr><td rowspan=2 colspan=2 bgcolor=#EFCA95><table width=197 cellpadding=0 cellspacing=0 bgcolor=#FEF8F0><colgroup style='padding-left:10px'><tr><td class=bg_menu1><b><a href='../adm_re/menu05_003_form.php' style='color:#555500;'>신규과정개설</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/menu05_003_info.php' style='color:#555500;'>과정정보</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/menu05_003_mok.php' style='color:#555500;'>목차관리</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/menu05_003_exam.php' style='color:#555500;'>시험관리</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/menu05_003_report.php' style='color:#555500;'>과제관리</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/menu05_003_del.php' style='color:#555500;'>과정삭제</a></b></td></tr></table></td><td></td></tr><tr><td bgcolor=#DDDAD5 height=40></td></tr><tr><td width=4></td><td height=3 width=197 bgcolor=#DDDAD5></td><td bgcolor=#DDDAD5></td></tr></table>
+<img src='../adm_re/img/menu800.gif' border=0 id='id_menu800' onmouseover="layer_view('id_menu800', 'menu_menu800', 'view', -2, 5);">&nbsp; <table width=200 cellpadding=1 cellspacing=0 id='menu_menu800' style='position:absolute; display:none; z-index:1;' onpropertychange="selectBoxHidden('menu_menu800')"><colgroup><colgroup><colgroup width=10><tr><td rowspan=2 colspan=2 bgcolor=#EFCA95><table width=197 cellpadding=0 cellspacing=0 bgcolor=#FEF8F0><colgroup style='padding-left:10px'><tr><td class=bg_menu1><b><a href='../adm_re/relativity_step_01.php' style='color:#555500;'>성적관리(4학점-1)</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/relativity_interface.php' style='color:#555500;'>성적관리(4학점-2)</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/search_n.php' style='color:#555500;'>성적관리(4학점-3)</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/search_n4.php' style='color:#555500;'>성적관리(4학점-4)</a></b></td></tr><tr><td class=bg_line1></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/search_half_n.php' style='color:#555500;'>성적관리(1/2학점)</a></b></td></tr><tr><td class=bg_line1></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/_result_search_n.php' style='color:#555500;'>최종교육청성적(4학점)</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/_result_search_half_n.php' style='color:#555500;'>최종교육청성적(1/2학점)</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/search_half_s0089.php' style='color:#555500;'>국가위윈회최종성적</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/search_half_s0089_2018.php' style='color:#555500;'>인권위최종성적 2018~</a></b></td></tr></table></td><td></td></tr><tr><td bgcolor=#DDDAD5 height=40></td></tr><tr><td width=4></td><td height=3 width=197 bgcolor=#DDDAD5></td><td bgcolor=#DDDAD5></td></tr></table>
+<img src='../adm_re/img/menu900.gif' border=0 id='id_menu900' onmouseover="layer_view('id_menu900', 'menu_menu900', 'view', -2, 5);">&nbsp; <table width=200 cellpadding=1 cellspacing=0 id='menu_menu900' style='position:absolute; display:none; z-index:1;' onpropertychange="selectBoxHidden('menu_menu900')"><colgroup><colgroup><colgroup width=10><tr><td rowspan=2 colspan=2 bgcolor=#EFCA95><table width=197 cellpadding=0 cellspacing=0 bgcolor=#FEF8F0><colgroup style='padding-left:10px'><tr><td class=bg_menu1><b><a href='../adm_re/attendance01.php' style='color:#555500;'>출석고사 대상자</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/attendance02.php' style='color:#555500;'>출석고사장</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/attendance03_list.php' style='color:#555500;'>출석고사수험표</a></b></td></tr><tr><td class=bg_line1></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/area_search_n.php' style='color:#555500;'>수험번호 생성</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/area_search_n_1.php' style='color:#555500;'>수험번호 관리</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/menu09_550.php' style='color:#555500;'>수험생 가답안등록</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/menu09_600.php' style='color:#555500;'>수험생 가답안확인</a></b></td></tr></table></td><td></td></tr><tr><td bgcolor=#DDDAD5 height=40></td></tr><tr><td width=4></td><td height=3 width=197 bgcolor=#DDDAD5></td><td bgcolor=#DDDAD5></td></tr></table>
+<img src='../adm_re/img/menu955.gif' border=0 id='id_menu955' onmouseover="layer_view('id_menu955', 'menu_menu955', 'view', -2, 5);">&nbsp; <table width=200 cellpadding=1 cellspacing=0 id='menu_menu955' style='position:absolute; display:none; z-index:1;' onpropertychange="selectBoxHidden('menu_menu955')"><colgroup><colgroup><colgroup width=10><tr><td rowspan=2 colspan=2 bgcolor=#EFCA95><table width=197 cellpadding=0 cellspacing=0 bgcolor=#FEF8F0><colgroup style='padding-left:10px'><tr><td class=bg_menu1><b><a href='../adm_re/coupon/_coupon_write_discount.php' style='color:#555500;'>할인쿠폰생성</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/coupon/_coupon_write_id.php' style='color:#555500;'>아이디쿠폰생성</a></b></td></tr><tr><td class=bg_line1></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/coupon/_coupon_list.php' style='color:#555500;'>쿠폰목록</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/coupon/_coupon_list_member.php' style='color:#555500;'>쿠폰리스트명단</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/coupon/_coupon_list_event.php' style='color:#555500;'>이벤트용쿠폰목록</a></b></td></tr><tr><td class=bg_line1></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/dis_list.php' style='color:#555500;'>할인프로그램</a></b></td></tr></table></td><td></td></tr><tr><td bgcolor=#DDDAD5 height=40></td></tr><tr><td width=4></td><td height=3 width=197 bgcolor=#DDDAD5></td><td bgcolor=#DDDAD5></td></tr></table>
+<img src='../adm_re/img/menu966.gif' border=0 id='id_menu966' onmouseover="layer_view('id_menu966', 'menu_menu966', 'view', -2, 5);">&nbsp; <table width=200 cellpadding=1 cellspacing=0 id='menu_menu966' style='position:absolute; display:none; z-index:1;' onpropertychange="selectBoxHidden('menu_menu966')"><colgroup><colgroup><colgroup width=10><tr><td rowspan=2 colspan=2 bgcolor=#EFCA95><table width=197 cellpadding=0 cellspacing=0 bgcolor=#FEF8F0><colgroup style='padding-left:10px'><tr><td class=bg_menu1><b><a href='../adm_re/mall_pay_list01.php' style='color:#555500;'>구매관리</a></b></td></tr><tr><td class=bg_line1></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/mall_item_list.php' style='color:#555500;'>상품/판매등록</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/mall_category.php' style='color:#555500;'>분류추가/변경</a></b></td></tr><tr><td class=bg_line1></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/mall_insert_list.php' style='color:#555500;'>자격증/교재추가</a></b></td></tr></table></td><td></td></tr><tr><td bgcolor=#DDDAD5 height=40></td></tr><tr><td width=4></td><td height=3 width=197 bgcolor=#DDDAD5></td><td bgcolor=#DDDAD5></td></tr></table>
+<img src='../adm_re/img/menu977.gif' border=0 id='id_menu977' onmouseover="layer_view('id_menu977', 'menu_menu977', 'view', -2, 5);">&nbsp; <table width=200 cellpadding=1 cellspacing=0 id='menu_menu977' style='position:absolute; display:none; z-index:1;' onpropertychange="selectBoxHidden('menu_menu977')"><colgroup><colgroup><colgroup width=10><tr><td rowspan=2 colspan=2 bgcolor=#EFCA95><table width=197 cellpadding=0 cellspacing=0 bgcolor=#FEF8F0><colgroup style='padding-left:10px'><tr><td class=bg_menu1><b><a href='../adm_re/analy_member.php' style='color:#555500;'>회원별 통계</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/analy_reg_member.php' style='color:#555500;'>가입자구분 통계</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/analy_edu.php' style='color:#555500;'>과정별 통계</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/research_result.php' style='color:#555500;'>설문지 분석</a></b></td></tr><tr><td class=bg_line1></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/mail_domain_list.php' style='color:#555500;'>이메일도메인</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/visit_list.php' style='color:#555500;'>접속자현황</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/mw.member.count.php' style='color:#555500;'>회원가입통계</a></b></td></tr><tr><td class=bg_line1></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/grade_bunpo.php' style='color:#555500;'>과정별 성적분포</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/exam_analy.php' style='color:#555500;'>시험문항분석</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/answer_list.php' style='color:#555500;'>정답공개</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/result_total.php' style='color:#555500;'>이수자통계현황</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/lec_grade_result.php' style='color:#555500;'>과정별 이수현황</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/menu04_977.php' style='color:#555500;'>신규과정 설문조사</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/menu04_977_busan.php' style='color:#555500;'>부산교육청 설문조사확인</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/click_log_list.php' style='color:#555500;'>클릭로그통계</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/stat_total.php' style='color:#555500;'>종합통계</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/analy_free_lecture.php' style='color:#555500;'>자율연수 매출 통계</a></b></td></tr><tr><td class=bg_line1></td></tr></table></td><td></td></tr><tr><td bgcolor=#DDDAD5 height=40></td></tr><tr><td width=4></td><td height=3 width=197 bgcolor=#DDDAD5></td><td bgcolor=#DDDAD5></td></tr></table>
+<img src='../adm_re/img/menu988.gif' border=0 id='id_menu988' onmouseover="layer_view('id_menu988', 'menu_menu988', 'view', -2, 5);">&nbsp; <table width=200 cellpadding=1 cellspacing=0 id='menu_menu988' style='position:absolute; display:none; z-index:1;' onpropertychange="selectBoxHidden('menu_menu988')"><colgroup><colgroup><colgroup width=10><tr><td rowspan=2 colspan=2 bgcolor=#EFCA95><table width=197 cellpadding=0 cellspacing=0 bgcolor=#FEF8F0><colgroup style='padding-left:10px'><tr><td class=bg_menu1><b><a href='../adm_re/member_select_insert.php' style='color:#555500;'>1.단체회원(엑셀)등록</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/menu988_lecture_r.php' style='color:#555500;'>2.단체회원과정등록</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/menu988_advice.php' style='color:#555500;'>3.단체회원현황</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/menu988_pay.php' style='color:#555500;'>4.주문내역</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/menu988_ausung_qna.php' style='color:#555500;'>5.단체신청확인(게시판)</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/menu988_group_study_manage.php' style='color:#555500;'>6.단체수강관리</a></b></td></tr></table></td><td></td></tr><tr><td bgcolor=#DDDAD5 height=40></td></tr><tr><td width=4></td><td height=3 width=197 bgcolor=#DDDAD5></td><td bgcolor=#DDDAD5></td></tr></table>
+<img src='../adm_re/img/menu989.gif' border=0 id='id_menu989' onmouseover="layer_view('id_menu989', 'menu_menu989', 'view', -2, 5);">&nbsp; <table width=200 cellpadding=1 cellspacing=0 id='menu_menu989' style='position:absolute; display:none; z-index:1;' onpropertychange="selectBoxHidden('menu_menu989')"><colgroup><colgroup><colgroup width=10><tr><td rowspan=2 colspan=2 bgcolor=#EFCA95><table width=197 cellpadding=0 cellspacing=0 bgcolor=#FEF8F0><colgroup style='padding-left:10px'><tr><td class=bg_menu1><b><a href='../adm_re/menu989_list.php' style='color:#555500;'>1.교수자료 리스트</a></b></td></tr><tr><td class=bg_menu1><b><a href='../adm_re/menu989_event_list.php' style='color:#555500;'>2.이벤트 리스트</a></b></td></tr></table></td><td></td></tr><tr><td bgcolor=#DDDAD5 height=40></td></tr><tr><td width=4></td><td height=3 width=197 bgcolor=#DDDAD5></td><td bgcolor=#DDDAD5></td></tr></table>
+<!-- <a href="../LMS/" target="_blank"><img src='../adm_re/img/menu600_1.gif' border=0 alt="학습관리자모드"></a>--> <a href="http://www.edulove.co.kr/awstats/awstats.pl?config=www.edulove.co.kr" target="_blank"><img src='../adm_re/img/menu1000.gif' border=0 alt="웹로그분석"></a>
+  </td>
+</tr>
+<tr><td colspan=3 bgcolor=#C3BBB1 height=1></td></tr>
+<tr><td colspan=3 bgcolor=#E5E5E5 height=2></td></tr>
+<tr>
+  <td colspan=3 height=2 bgcolor=#F2F2F2 align=left>
+    <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+
+    </tr>
+    </table>
+  </td>
+</tr>
+<tr onmouseover="layer_view('','','','','')">
+  <td><a href='../'><img src='../adm_re/img/home.gif' border=0></a><a href='../bbs/logout.php'><img src='../adm_re/img/logout.gif' border=0></a></td>
+  <td rowspan=2 width=1 bgcolor=#DBDBDB></td>
+  <td bgcolor=#F8F8F8 align=left>&nbsp;&nbsp;&nbsp;
+    <img src='../adm_re/img/navi_icon.gif' align=absmiddle>
+    &nbsp;<a href='../adm_re/'>Admin</a> >
+        관리자메인&nbsp;&nbsp;
+  </td>
+</tr>
+<tr onmouseover="layer_view('','','','','')">
+  <td valign=top>
+  <br>
+    <table width=180 cellpadding=0 cellspacing=0>
+        </table>
+    <br>
+  </td>
+  <td valign=top style='padding:10px;'>
+
+
+
+
+
+
+
+<link href="/common/style.css" rel="stylesheet" type="text/css">
+<style>
+	a#link_:link { text-decoration:none }
+	a#link_:visited { text-decoration:none }
+	a#link_:hover { text-decoration:none }
+	a#link_:active { text-decoration:none }
+
+	#link_button { background-color:#6799FF;font-weight:bold;font-size:12pt;padding:7px;color:white;margin-right:10px;}
+	#link_button_selected { background-color:white;font-weight:bold;font-size:12pt;padding:7px;color:#6799FF;margin-right:10px;border:1px solid #6799FF; }
+</style>
+
+<table width=100% cellpadding=0 cellspacing=0><tr><td width=80% align=left><table border='0' cellpadding='0' cellspacing='1'><tr><td height='24'><img src='../adm_re/img/icon_title.gif' width=20 height=9> <font color='#525252'><b>신규가입회원 10건</b></font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr></table><table width=100% cellpadding=0 cellspacing=0><tr><td height=1></td></tr></table></td><td width=20% align=right><a href='./member_list.php'><img src='../adm_re/img/icon_more.gif' width='43' height='11' border=0 align=absmiddle></a></td></tr></table>
+<table width=100%>
+<table width="100%" border="0">
+<tr>
+  <td width=60% align=left> (총회원수 : 154,068, <font color=orange>차단 : 0</font>, <font color=crimson>탈퇴 : 145</font>)
+  <!--<a href='javascript:testPOP("./research_report_1.php",1100,560,0)';>평가테스트</a><a href=./research_result.php>평가테스트결과</a> <a href=./menu04_009_test.php>결제화면테스트</a>&nbsp;&nbsp;-->
+	<a href="javascript:window.open('./customer_manager.php', 'customer_manager', 'width=1024,height=768,scrollbars
+=1').focus();" id="link_"><span id="link_button">고객관리(상담관리)</span></a>
+
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- <b>키드키즈쇼핑몰가입자 : <font color=red> 273명 </font></b> -->
+  </td>
+
+
+</tr>
+
+  <tr>
+
+    <td height="200"><table width="84%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="25"><img src="http://edufine.or.kr/admin/image/tit_noworder.gif" height="16" /></td>
+      </tr>
+      <br>
+      <tr>
+        <td height="19"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+          <tr>
+            <td colspan="20" class="t_rd"></td>
+          </tr>
+          <tr class="t_th">
+            <th width="15%">주문날짜</th>
+            <th width="22%">주문번호</th>
+            <th width="10%">주문자</th>
+            <th width="19%">결제금액</th>
+            <th width="19%">결제방법</th>
+            <th width="15%" align="center">주문상태</th>
+          </tr>
+          <tr>
+            <td colspan="20" class="t_rd"></td>
+          </tr>
+                   <tr class='list$list col1 ht center'>
+            <td width="15%" height="24" style="padding-top:5 "><a href="/adm_re/menu04_009_new.php?sselect=uid&stext=intanami">
+              <nobr style='display:block; overflow:hidden; width:100px;'>2019-01-23 14:52:26</nobr>
+            </a></td>
+            <td width="22%" class="font_12_3" style="padding-top:5 "><a href="/adm_re/menu04_009_new.php?sselect=uid&stext=intanami">
+              384915            </a></td>
+            <td width="10%" style="padding-top:5 ">
+              박혜영</td>
+            <td width="19%" align="right" style="padding:5 15 0 0"><a href="/adm_re/menu04_009_new.php?sselect=uid&stext=intanami">
+              0              원</a></td>
+                        <td width="19%" style="padding-top:5 ">은행/가상</td>
+                                    <td width="15%" class="font_12_3" align="center" style="padding-top:2 "><a href="/adm_re/menu04_009_new.php?sselect=uid&stext=intanami">결제완료</td>
+                      </tr>
+          <tr align="center">
+            <td height="1" colspan="10" background="../image/dot_bg.gif"></td>
+          </tr>
+                   <tr class='list$list col1 ht center'>
+            <td width="15%" height="24" style="padding-top:5 "><a href="/adm_re/menu04_009_new.php?sselect=uid&stext=zzanga">
+              <nobr style='display:block; overflow:hidden; width:100px;'>2019-01-23 13:09:58</nobr>
+            </a></td>
+            <td width="22%" class="font_12_3" style="padding-top:5 "><a href="/adm_re/menu04_009_new.php?sselect=uid&stext=zzanga">
+              384914            </a></td>
+            <td width="10%" style="padding-top:5 ">
+              최은영</td>
+            <td width="19%" align="right" style="padding:5 15 0 0"><a href="/adm_re/menu04_009_new.php?sselect=uid&stext=zzanga">
+              7000              원</a></td>
+                        <td width="19%" style="padding-top:5 ">은행/가상</td>
+                                    <td width="15%" class="font_12_3" align="center" style="padding-top:2 "><a href="/adm_re/menu04_009_new.php?sselect=uid&stext=zzanga">결제완료</td>
+                      </tr>
+          <tr align="center">
+            <td height="1" colspan="10" background="../image/dot_bg.gif"></td>
+          </tr>
+                   <tr class='list$list col1 ht center'>
+            <td width="15%" height="24" style="padding-top:5 "><a href="/adm_re/menu04_009_new.php?sselect=uid&stext=zzanga">
+              <nobr style='display:block; overflow:hidden; width:100px;'>2019-01-23 13:09:58</nobr>
+            </a></td>
+            <td width="22%" class="font_12_3" style="padding-top:5 "><a href="/adm_re/menu04_009_new.php?sselect=uid&stext=zzanga">
+              384913            </a></td>
+            <td width="10%" style="padding-top:5 ">
+              최은영</td>
+            <td width="19%" align="right" style="padding:5 15 0 0"><a href="/adm_re/menu04_009_new.php?sselect=uid&stext=zzanga">
+              0              원</a></td>
+                        <td width="19%" style="padding-top:5 ">은행/가상</td>
+                                    <td width="15%" class="font_12_3" align="center" style="padding-top:2 "><a href="/adm_re/menu04_009_new.php?sselect=uid&stext=zzanga">결제완료</td>
+                      </tr>
+          <tr align="center">
+            <td height="1" colspan="10" background="../image/dot_bg.gif"></td>
+          </tr>
+                   <tr class='list$list col1 ht center'>
+            <td width="15%" height="24" style="padding-top:5 "><a href="/adm_re/menu04_009_new.php?sselect=uid&stext=sharpguy81">
+              <nobr style='display:block; overflow:hidden; width:100px;'>2019-01-23 12:29:50</nobr>
+            </a></td>
+            <td width="22%" class="font_12_3" style="padding-top:5 "><a href="/adm_re/menu04_009_new.php?sselect=uid&stext=sharpguy81">
+              384912            </a></td>
+            <td width="10%" style="padding-top:5 ">
+              박치욱</td>
+            <td width="19%" align="right" style="padding:5 15 0 0"><a href="/adm_re/menu04_009_new.php?sselect=uid&stext=sharpguy81">
+              0              원</a></td>
+                        <td width="19%" style="padding-top:5 ">은행/가상</td>
+                                    <td width="15%" class="font_12_3" align="center" style="padding-top:2 "><a href="/adm_re/menu04_009_new.php?sselect=uid&stext=sharpguy81">결제완료</td>
+                      </tr>
+          <tr align="center">
+            <td height="1" colspan="10" background="../image/dot_bg.gif"></td>
+          </tr>
+                   <tr class='list$list col1 ht center'>
+            <td width="15%" height="24" style="padding-top:5 "><a href="/adm_re/menu04_009_new.php?sselect=uid&stext=sharpguy81">
+              <nobr style='display:block; overflow:hidden; width:100px;'>2019-01-23 12:21:36</nobr>
+            </a></td>
+            <td width="22%" class="font_12_3" style="padding-top:5 "><a href="/adm_re/menu04_009_new.php?sselect=uid&stext=sharpguy81">
+              384911            </a></td>
+            <td width="10%" style="padding-top:5 ">
+              박치욱</td>
+            <td width="19%" align="right" style="padding:5 15 0 0"><a href="/adm_re/menu04_009_new.php?sselect=uid&stext=sharpguy81">
+              0              원</a></td>
+                        <td width="19%" style="padding-top:5 ">은행/가상</td>
+                                    <td width="15%" class="font_12_3" align="center" style="padding-top:2 "><a href="/adm_re/menu04_009_new.php?sselect=uid&stext=sharpguy81">결제완료</td>
+                      </tr>
+          <tr align="center">
+            <td height="1" colspan="10" background="../image/dot_bg.gif"></td>
+          </tr>
+                   <tr class='list$list col1 ht center'>
+            <td width="15%" height="24" style="padding-top:5 "><a href="/adm_re/menu04_009_new.php?sselect=uid&stext=loolroo">
+              <nobr style='display:block; overflow:hidden; width:100px;'>2019-01-23 11:45:55</nobr>
+            </a></td>
+            <td width="22%" class="font_12_3" style="padding-top:5 "><a href="/adm_re/menu04_009_new.php?sselect=uid&stext=loolroo">
+              384910            </a></td>
+            <td width="10%" style="padding-top:5 ">
+              문민호</td>
+            <td width="19%" align="right" style="padding:5 15 0 0"><a href="/adm_re/menu04_009_new.php?sselect=uid&stext=loolroo">
+              7000              원</a></td>
+                        <td width="19%" style="padding-top:5 ">은행/가상</td>
+                                    <td width="15%" class="font_12_3" align="center" style="padding-top:2 "><a href="/adm_re/menu04_009_new.php?sselect=uid&stext=loolroo">미완료</td>
+                      </tr>
+          <tr align="center">
+            <td height="1" colspan="10" background="../image/dot_bg.gif"></td>
+          </tr>
+                   <tr class='list$list col1 ht center'>
+            <td width="15%" height="24" style="padding-top:5 "><a href="/adm_re/menu04_009_new.php?sselect=uid&stext=loolroo">
+              <nobr style='display:block; overflow:hidden; width:100px;'>2019-01-23 11:45:55</nobr>
+            </a></td>
+            <td width="22%" class="font_12_3" style="padding-top:5 "><a href="/adm_re/menu04_009_new.php?sselect=uid&stext=loolroo">
+              384909            </a></td>
+            <td width="10%" style="padding-top:5 ">
+              문민호</td>
+            <td width="19%" align="right" style="padding:5 15 0 0"><a href="/adm_re/menu04_009_new.php?sselect=uid&stext=loolroo">
+              0              원</a></td>
+                        <td width="19%" style="padding-top:5 ">은행/가상</td>
+                                    <td width="15%" class="font_12_3" align="center" style="padding-top:2 "><a href="/adm_re/menu04_009_new.php?sselect=uid&stext=loolroo">미완료</td>
+                      </tr>
+          <tr align="center">
+            <td height="1" colspan="10" background="../image/dot_bg.gif"></td>
+          </tr>
+                   <tr class='list$list col1 ht center'>
+            <td width="15%" height="24" style="padding-top:5 "><a href="/adm_re/menu04_009_new.php?sselect=uid&stext=loolroo">
+              <nobr style='display:block; overflow:hidden; width:100px;'>2019-01-23 11:45:55</nobr>
+            </a></td>
+            <td width="22%" class="font_12_3" style="padding-top:5 "><a href="/adm_re/menu04_009_new.php?sselect=uid&stext=loolroo">
+              384908            </a></td>
+            <td width="10%" style="padding-top:5 ">
+              문민호</td>
+            <td width="19%" align="right" style="padding:5 15 0 0"><a href="/adm_re/menu04_009_new.php?sselect=uid&stext=loolroo">
+              0              원</a></td>
+                        <td width="19%" style="padding-top:5 ">은행/가상</td>
+                                    <td width="15%" class="font_12_3" align="center" style="padding-top:2 "><a href="/adm_re/menu04_009_new.php?sselect=uid&stext=loolroo">미완료</td>
+                      </tr>
+          <tr align="center">
+            <td height="1" colspan="10" background="../image/dot_bg.gif"></td>
+          </tr>
+                   <tr class='list$list col1 ht center'>
+            <td width="15%" height="24" style="padding-top:5 "><a href="/adm_re/menu04_009_new.php?sselect=uid&stext=wg0724">
+              <nobr style='display:block; overflow:hidden; width:100px;'>2019-01-23 10:40:14</nobr>
+            </a></td>
+            <td width="22%" class="font_12_3" style="padding-top:5 "><a href="/adm_re/menu04_009_new.php?sselect=uid&stext=wg0724">
+              384907            </a></td>
+            <td width="10%" style="padding-top:5 ">
+              김지혜</td>
+            <td width="19%" align="right" style="padding:5 15 0 0"><a href="/adm_re/menu04_009_new.php?sselect=uid&stext=wg0724">
+              0              원</a></td>
+                        <td width="19%" style="padding-top:5 ">은행/가상</td>
+                                    <td width="15%" class="font_12_3" align="center" style="padding-top:2 "><a href="/adm_re/menu04_009_new.php?sselect=uid&stext=wg0724">결제완료</td>
+                      </tr>
+          <tr align="center">
+            <td height="1" colspan="10" background="../image/dot_bg.gif"></td>
+          </tr>
+                   <tr class='list$list col1 ht center'>
+            <td width="15%" height="24" style="padding-top:5 "><a href="/adm_re/menu04_009_new.php?sselect=uid&stext=mylawcode">
+              <nobr style='display:block; overflow:hidden; width:100px;'>2019-01-23 08:56:08</nobr>
+            </a></td>
+            <td width="22%" class="font_12_3" style="padding-top:5 "><a href="/adm_re/menu04_009_new.php?sselect=uid&stext=mylawcode">
+              384906            </a></td>
+            <td width="10%" style="padding-top:5 ">
+              최정석</td>
+            <td width="19%" align="right" style="padding:5 15 0 0"><a href="/adm_re/menu04_009_new.php?sselect=uid&stext=mylawcode">
+              30000              원</a></td>
+                        <td width="19%" style="padding-top:5 ">신용카드</td>
+                                    <td width="15%" class="font_12_3" align="center" style="padding-top:2 "><a href="/adm_re/menu04_009_new.php?sselect=uid&stext=mylawcode">결제완료</td>
+                      </tr>
+          <tr align="center">
+            <td height="1" colspan="10" background="../image/dot_bg.gif"></td>
+          </tr>
+                  </table></td>
+      </tr>
+    </table></td>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="27"><img src="http://edufine.or.kr/admin/image/tit_member.gif" height="14" /></td>
+      </tr>
+      <tr>
+        <td height="19"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+          <tr>
+            <td colspan="20" class="t_rd"></td>
+          </tr>
+          <tr class="t_th">
+            <th width="10%">회원아이디</th>
+            <th width="10%">이름</th>
+            <th width="15%">별명</th>
+            <th width="5%">권한</th>
+			 <th width="5%">포인트</th>
+			<th width="10%">최종접속</th>
+			 <th width="4%" title='메일수신허용여부'>수신</th>
+			  <th width="4%"  title='정보공개여부'>공개</th>
+			  <th width="4%" title='이메일인증'>인증</th>
+			  <th width="4%">차단</td>
+			  <th width="4%" title='접근가능한 그룹수'>그룹</th>
+
+          </tr>
+          <tr>
+            <td colspan="20" class="t_rd"></td>
+          </tr>
+
+    <input type=hidden name=mb_id[0] value='llh106'>
+    <tr class='list0 col1 ht center'>
+    <td title='llh106'><nobr style='display:block; overflow:hidden; width:100px;'>&nbsp;llh106</nobr></td>
+    <td>정승현</td>
+    <td><a href="javascript:;" onClick="showSideView(this, 'llh106', '세아세브니', 'amwxMDZAaGFubWFpbC5uZXQ=', '');" title="[llh106]세아세브니"><span class='member'>세아세브니</span></a></td>
+    <td>2</td>
+    <td align=right><a href='./point_list.php?sfl=mb_id&stx=llh106' class=tt>6,000</a>&nbsp;</td>
+        <td>19-01-23</td>
+        <td>&radic;</td>
+        <td>&nbsp;</td>
+        <td title='2019-01-23 17:16:31'>&radic;</td>
+        <td title=''>&nbsp;</td>
+        <td></td>
+        </tr>
+    <input type=hidden name=mb_id[1] value='intanami'>
+    <tr class='list1 col1 ht center'>
+    <td title='intanami'><nobr style='display:block; overflow:hidden; width:100px;'>&nbsp;intanami</nobr></td>
+    <td>박혜영</td>
+    <td><a href="javascript:;" onClick="showSideView(this, 'intanami', '', 'aW50YW5hbWlAaGFubWFpbC5uZXQ=', '');" title="[intanami]"><span class='member'></span></a></td>
+    <td>2</td>
+    <td align=right><a href='./point_list.php?sfl=mb_id&stx=intanami' class=tt>6,000</a>&nbsp;</td>
+        <td>19-01-23</td>
+        <td>&radic;</td>
+        <td>&nbsp;</td>
+        <td title='2019-01-23 14:50:53'>&radic;</td>
+        <td title=''>&nbsp;</td>
+        <td></td>
+        </tr>
+    <input type=hidden name=mb_id[2] value='wg0724'>
+    <tr class='list0 col1 ht center'>
+    <td title='wg0724'><nobr style='display:block; overflow:hidden; width:100px;'>&nbsp;wg0724</nobr></td>
+    <td>김지혜</td>
+    <td><a href="javascript:;" onClick="showSideView(this, 'wg0724', 'zeze', 'd2cwNzI0QG5hdmVyLmNvbQ==', '');" title="[wg0724]zeze"><span class='member'>zeze</span></a></td>
+    <td>2</td>
+    <td align=right><a href='./point_list.php?sfl=mb_id&stx=wg0724' class=tt>6,000</a>&nbsp;</td>
+        <td>19-01-23</td>
+        <td>&radic;</td>
+        <td>&nbsp;</td>
+        <td title='2019-01-23 10:37:19'>&radic;</td>
+        <td title=''>&nbsp;</td>
+        <td></td>
+        </tr>
+    <input type=hidden name=mb_id[3] value='s26911'>
+    <tr class='list1 col1 ht center'>
+    <td title='s26911'><nobr style='display:block; overflow:hidden; width:100px;'>&nbsp;s26911</nobr></td>
+    <td>김성순</td>
+    <td><a href="javascript:;" onClick="showSideView(this, 's26911', '울보', 'czI2OTExQG5hdmVyLmNvbQ==', '');" title="[s26911]울보"><span class='member'>울보</span></a></td>
+    <td>2</td>
+    <td align=right><a href='./point_list.php?sfl=mb_id&stx=s26911' class=tt>6,000</a>&nbsp;</td>
+        <td>19-01-23</td>
+        <td>&radic;</td>
+        <td>&nbsp;</td>
+        <td title='2019-01-23 10:27:42'>&radic;</td>
+        <td title=''>&nbsp;</td>
+        <td></td>
+        </tr>
+    <input type=hidden name=mb_id[4] value='any333'>
+    <tr class='list0 col1 ht center'>
+    <td title='any333'><nobr style='display:block; overflow:hidden; width:100px;'>&nbsp;any333</nobr></td>
+    <td>김보람</td>
+    <td><a href="javascript:;" onClick="showSideView(this, 'any333', '', 'Zl9zcXVpcnJlbEBoYW5tYWlsLm5ldA==', '');" title="[any333]"><span class='member'></span></a></td>
+    <td>2</td>
+    <td align=right><a href='./point_list.php?sfl=mb_id&stx=any333' class=tt>7,200</a>&nbsp;</td>
+        <td>19-01-22</td>
+        <td>&radic;</td>
+        <td>&nbsp;</td>
+        <td title='2019-01-22 20:35:17'>&radic;</td>
+        <td title=''>&nbsp;</td>
+        <td></td>
+        </tr>
+    <input type=hidden name=mb_id[5] value='mylawcode'>
+    <tr class='list1 col1 ht center'>
+    <td title='mylawcode'><nobr style='display:block; overflow:hidden; width:100px;'>&nbsp;mylawcode</nobr></td>
+    <td>최정석</td>
+    <td><a href="javascript:;" onClick="showSideView(this, 'mylawcode', '쿠우겅', 'bXlsYXdjb2RlQGNiZS5nby5rcg==', '');" title="[mylawcode]쿠우겅"><span class='member'>쿠우겅</span></a></td>
+    <td>2</td>
+    <td align=right><a href='./point_list.php?sfl=mb_id&stx=mylawcode' class=tt>6,210</a>&nbsp;</td>
+        <td>19-01-23</td>
+        <td>&radic;</td>
+        <td>&nbsp;</td>
+        <td title='2019-01-22 17:40:31'>&radic;</td>
+        <td title=''>&nbsp;</td>
+        <td></td>
+        </tr>
+    <input type=hidden name=mb_id[6] value='bluewilly'>
+    <tr class='list0 col1 ht center'>
+    <td title='bluewilly'><nobr style='display:block; overflow:hidden; width:100px;'>&nbsp;bluewilly</nobr></td>
+    <td>송재훈</td>
+    <td><a href="javascript:;" onClick="showSideView(this, 'bluewilly', '어기사', 'Ymx1ZXdpbGx5QG5hdmVyLmNvbQ==', '');" title="[bluewilly]어기사"><span class='member'>어기사</span></a></td>
+    <td>2</td>
+    <td align=right><a href='./point_list.php?sfl=mb_id&stx=bluewilly' class=tt>6,000</a>&nbsp;</td>
+        <td>19-01-22</td>
+        <td>&radic;</td>
+        <td>&nbsp;</td>
+        <td title='2019-01-22 15:33:18'>&radic;</td>
+        <td title=''>&nbsp;</td>
+        <td></td>
+        </tr>
+    <input type=hidden name=mb_id[7] value='icygnus'>
+    <tr class='list1 col1 ht center'>
+    <td title='icygnus'><nobr style='display:block; overflow:hidden; width:100px;'>&nbsp;icygnus</nobr></td>
+    <td>정경희</td>
+    <td><a href="javascript:;" onClick="showSideView(this, 'icygnus', '하은', 'aXNhYnJhQGhhbm1haWwubmV0', '');" title="[icygnus]하은"><span class='member'>하은</span></a></td>
+    <td>2</td>
+    <td align=right><a href='./point_list.php?sfl=mb_id&stx=icygnus' class=tt>6,000</a>&nbsp;</td>
+        <td>19-01-22</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td title='2019-01-22 13:25:47'>&radic;</td>
+        <td title=''>&nbsp;</td>
+        <td></td>
+        </tr>
+    <input type=hidden name=mb_id[8] value='queenchamp'>
+    <tr class='list0 col1 ht center'>
+    <td title='queenchamp'><nobr style='display:block; overflow:hidden; width:100px;'>&nbsp;queenchamp</nobr></td>
+    <td>김순명</td>
+    <td><a href="javascript:;" onClick="showSideView(this, 'queenchamp', 'champ', 'cXVlZW5raW5na3BAaGFubWFpbC5uZXQ=', '');" title="[queenchamp]champ"><span class='member'>champ</span></a></td>
+    <td>2</td>
+    <td align=right><a href='./point_list.php?sfl=mb_id&stx=queenchamp' class=tt>6,010</a>&nbsp;</td>
+        <td>19-01-23</td>
+        <td>&radic;</td>
+        <td>&nbsp;</td>
+        <td title='2019-01-22 00:35:50'>&radic;</td>
+        <td title=''>&nbsp;</td>
+        <td></td>
+        </tr>
+    <input type=hidden name=mb_id[9] value='dongsimk'>
+    <tr class='list1 col1 ht center'>
+    <td title='dongsimk'><nobr style='display:block; overflow:hidden; width:100px;'>&nbsp;dongsimk</nobr></td>
+    <td>강희향</td>
+    <td><a href="javascript:;" onClick="showSideView(this, 'dongsimk', '', '', '');" title="[dongsimk]"><span class='member'></span></a></td>
+    <td>2</td>
+    <td align=right><a href='./point_list.php?sfl=mb_id&stx=dongsimk' class=tt>6,000</a>&nbsp;</td>
+        <td>19-01-21</td>
+        <td>&radic;</td>
+        <td>&nbsp;</td>
+        <td title='2019-01-21 17:31:45'>&radic;</td>
+        <td title=''>&nbsp;</td>
+        <td></td>
+        </tr><tr><td colspan='12' class='line2'></td></tr></table>        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+
+
+<table width="75%" height="58" border="0">
+  <tr>
+    <td><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td colspan="2">&nbsp;</td>
+
+
+
+
+			<td width="100%" align="left" valign="top">
+
+
+
+           	  <table width="100%"  border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td height="39" colspan="2">&nbsp;</td>
+
+
+
+
+
+
+
+
+</table>
+
+
+
+
+
+
+<table width="100%" border="0">
+<tr >
+  <td width=60% align=left ><font size = 5>묻고답하기현황  : </font><a href="./admin_qna.php"><font color =red size = 5 ><u>미답변 0 건 </u></a></font>
+ </td>
+
+
+</tr>
+
+</table>
+<table width=100% cellpadding=0 cellspacing=0><tr><td width=80% align=left><table border='0' cellpadding='0' cellspacing='1'><tr><td height='24'><img src='../adm_re/img/icon_title.gif' width=20 height=9> <font color='#525252'><b>최근게시물 10건</b></font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr></table><table width=100% cellpadding=0 cellspacing=0><tr><td height=1></td></tr></table></td><td width=20% align=right><a href='../bbs/new.php'><img src='../adm_re/img/icon_more.gif' width='43' height='11' border=0 align=absmiddle></a></td></tr></table>
+<table><!--
+<tr>http://www.edulove.co.kr/adm_re/admin_qna.php
+  <td><a href="./board_search.php">묻고답하기 관리</a></td>
+
+</tr>-->
+</table>
+<table width=100% cellpadding=0 cellspacing=1>
+<input type=hidden name=sst  value='mb_datetime'>
+<input type=hidden name=sod  value='desc'>
+<input type=hidden name=sfl  value=''>
+<input type=hidden name=stx  value=''>
+<input type=hidden name=page value=''>
+
+<tr class="t_th">
+  <th  width="8%">그룹</th>
+  <th  width="17%">게시판</th>
+  <th  width="25%">제목</th>
+  <th  width="8%">이름</th>
+  <th  width="8%">일시</th>
+ </tr>
+
+
+    <tr class='list0 col1 ht center'>
+    <td class=small><a href='../bbs/new.php?gr_id=menu04' target='_blank'>고객사랑센터</a></td>
+    <td class=small><a href='../bbs/board.php?bo_table=menu04001' target='_blank'>묻고 답하기</a></td>
+    <td align=left style='word-break:break-all;'>&nbsp;<a href='../bbs/board.php?bo_table=menu04001&wr_id=12700#c_12701' target='_blank'>[코] 모바일 연수 기간 연장 부탁드립니다.</a></td>
+    <td><a href="javascript:;" onClick="showSideView(this, 'admin', '교육사랑', 'c2c5NzQ4MzIyMjJAZGF1bS5uZXQ=', '');" title="[admin]교육사랑"><span class='member'>교육사랑</span></a></td>
+    <td>2019-01-23</td>
+    </tr>
+    <tr class='list1 col1 ht center'>
+    <td class=small><a href='../bbs/new.php?gr_id=menu04' target='_blank'>고객사랑센터</a></td>
+    <td class=small><a href='../bbs/board.php?bo_table=menu04001' target='_blank'>묻고 답하기</a></td>
+    <td align=left style='word-break:break-all;'>&nbsp;<a href='../bbs/board.php?bo_table=menu04001&wr_id=12700' target='_blank'>모바일 연수 기간 연장 부탁드립니다.</a></td>
+    <td><a href="javascript:;" onClick="showSideView(this, 'kjk0513', '김미혜', 'a2prMDUxM0BzZW4uZ28ua3I=', '');" title="[kjk0513]김미혜"><span class='member'>김미혜</span></a></td>
+    <td>2019-01-22</td>
+    </tr>
+    <tr class='list0 col1 ht center'>
+    <td class=small><a href='../bbs/new.php?gr_id=menu01' target='_blank'>직무연수</a></td>
+    <td class=small><a href='../bbs/board.php?bo_table=meno01005' target='_blank'>교육브리핑</a></td>
+    <td align=left style='word-break:break-all;'>&nbsp;<a href='../bbs/board.php?bo_table=meno01005&wr_id=67' target='_blank'>학교 미세먼지 저감을 위한 기술개발사업 추진</a></td>
+    <td><a href="javascript:;" onClick="showSideView(this, 'admin', '교육사랑', 'c2c5NzQ4MzIyMjJAZGF1bS5uZXQ=', '');" title="[admin]교육사랑"><span class='member'>교육사랑</span></a></td>
+    <td>2019-01-22</td>
+    </tr>
+    <tr class='list1 col1 ht center'>
+    <td class=small><a href='../bbs/new.php?gr_id=menu04' target='_blank'>고객사랑센터</a></td>
+    <td class=small><a href='../bbs/board.php?bo_table=menu04001' target='_blank'>묻고 답하기</a></td>
+    <td align=left style='word-break:break-all;'>&nbsp;<a href='../bbs/board.php?bo_table=menu04001&wr_id=12698#c_12699' target='_blank'>[코] 사이버 강의 수강</a></td>
+    <td><a href="javascript:;" onClick="showSideView(this, 'admin', '교육사랑', 'c2c5NzQ4MzIyMjJAZGF1bS5uZXQ=', '');" title="[admin]교육사랑"><span class='member'>교육사랑</span></a></td>
+    <td>2019-01-22</td>
+    </tr>
+    <tr class='list0 col1 ht center'>
+    <td class=small><a href='../bbs/new.php?gr_id=menu04' target='_blank'>고객사랑센터</a></td>
+    <td class=small><a href='../bbs/board.php?bo_table=menu04001' target='_blank'>묻고 답하기</a></td>
+    <td align=left style='word-break:break-all;'>&nbsp;<a href='../bbs/board.php?bo_table=menu04001&wr_id=12698' target='_blank'>사이버 강의 수강</a></td>
+    <td><a href="javascript:;" onClick="showSideView(this, 'yeshee', '김옥희', 'a29raDI1QG5hdmVyLmNvbQ==', '');" title="[yeshee]김옥희"><span class='member'>김옥희</span></a></td>
+    <td>2019-01-21</td>
+    </tr>
+    <tr class='list1 col1 ht center'>
+    <td class=small><a href='../bbs/new.php?gr_id=menu01' target='_blank'>직무연수</a></td>
+    <td class=small><a href='../bbs/board.php?bo_table=meno01005' target='_blank'>교육브리핑</a></td>
+    <td align=left style='word-break:break-all;'>&nbsp;<a href='../bbs/board.php?bo_table=meno01005&wr_id=66' target='_blank'>서울특별시교육청 2019년 주요업무계획 발표 </a></td>
+    <td><a href="javascript:;" onClick="showSideView(this, 'admin', '교육사랑', 'c2c5NzQ4MzIyMjJAZGF1bS5uZXQ=', '');" title="[admin]교육사랑"><span class='member'>교육사랑</span></a></td>
+    <td>2019-01-21</td>
+    </tr>
+    <tr class='list0 col1 ht center'>
+    <td class=small><a href='../bbs/new.php?gr_id=menu04' target='_blank'>고객사랑센터</a></td>
+    <td class=small><a href='../bbs/board.php?bo_table=menu04001' target='_blank'>묻고 답하기</a></td>
+    <td align=left style='word-break:break-all;'>&nbsp;<a href='../bbs/board.php?bo_table=menu04001&wr_id=12696#c_12697' target='_blank'>[코] 모바일 쿠폰</a></td>
+    <td><a href="javascript:;" onClick="showSideView(this, 'admin', '교육사랑', 'c2c5NzQ4MzIyMjJAZGF1bS5uZXQ=', '');" title="[admin]교육사랑"><span class='member'>교육사랑</span></a></td>
+    <td>2019-01-21</td>
+    </tr>
+    <tr class='list1 col1 ht center'>
+    <td class=small><a href='../bbs/new.php?gr_id=menu04' target='_blank'>고객사랑센터</a></td>
+    <td class=small><a href='../bbs/board.php?bo_table=menu04001' target='_blank'>묻고 답하기</a></td>
+    <td align=left style='word-break:break-all;'>&nbsp;<a href='../bbs/board.php?bo_table=menu04001&wr_id=12696' target='_blank'>모바일 쿠폰</a></td>
+    <td><a href="javascript:;" onClick="showSideView(this, 'sealove74', '한정진', 'c2VhbG92ZTc0QG5hdmVyLmNvbQ==', '');" title="[sealove74]한정진"><span class='member'>한정진</span></a></td>
+    <td>2019-01-19</td>
+    </tr>
+    <tr class='list0 col1 ht center'>
+    <td class=small><a href='../bbs/new.php?gr_id=menu04' target='_blank'>고객사랑센터</a></td>
+    <td class=small><a href='../bbs/board.php?bo_table=menu04018' target='_blank'>수강취소/환불 신청하기</a></td>
+    <td align=left style='word-break:break-all;'>&nbsp;<a href='../bbs/board.php?bo_table=menu04018&wr_id=3621#c_3622' target='_blank'>[코] 수강취소/환불 신청합니다.</a></td>
+    <td><a href="javascript:;" onClick="showSideView(this, 'admin', '교육사랑', 'c2c5NzQ4MzIyMjJAZGF1bS5uZXQ=', '');" title="[admin]교육사랑"><span class='member'>교육사랑</span></a></td>
+    <td>2019-01-18</td>
+    </tr>
+    <tr class='list1 col1 ht center'>
+    <td class=small><a href='../bbs/new.php?gr_id=menu04' target='_blank'>고객사랑센터</a></td>
+    <td class=small><a href='../bbs/board.php?bo_table=menu04018' target='_blank'>수강취소/환불 신청하기</a></td>
+    <td align=left style='word-break:break-all;'>&nbsp;<a href='../bbs/board.php?bo_table=menu04018&wr_id=3621' target='_blank'>수강취소/환불 신청합니다.</a></td>
+    <td><a href="javascript:;" onClick="showSideView(this, 'gba0715', '구본애', 'Z2JhMDcxNUBuYXZlci5jb20=', '');" title="[gba0715]구본애"><span class='member'>구본애</span></a></td>
+    <td>2019-01-18</td>
+    </tr> <tr><td colspan='5' class='line2'></td></tr></table><br><br>
+<table>
+<tr>
+	<td>
+		<div style="border:1px solid red;padding:10px;color:red;">
+			<span style="font-weight:bold;">※ 사내관리자 보안 규정</span><Br/>
+			사내관리자 페이지 내 등록되는 모든 정보의 저작권은 이케이주식회사에 있습니다.<br/>
+			로그인 당사자는 사내관리자 페이지 일체의 정보에 대해 회사의 허락 없이 다른 매체로 이관하는 행위(사진촬영 포함),<br/>
+			외부에 누설하거나 유출하는 행위를 금합니다.<br/>
+			이로 인한 행위가 확인될 경우 로그인 당사자는 모든 법적 책임과 손해를 배상하여야 합니다.
+		</div>
+	</td>
+</tr>
+</table>
+<br><br>
+<script>
+function setCookie(cookieName, cookieValue, expiredays, path, domain, secure) {
+	var oExpires = new Date();
+	if(expiredays) {
+		oExpires.setDate( oExpires.getDate() + parseInt(expiredays+'') );
+		oExpires.setHours(0);
+		oExpires.setMinutes(0);
+		oExpires.setSeconds(0);
+	}
+
+	document.cookie =
+		escape(cookieName) + '=' + escape(cookieValue)
+		+ (expiredays ? '; expires=' + oExpires.toGMTString() : '')
+		+ (path ? '; path=' + path : '')
+		+ (domain ? '; domain=' + domain : '')
+		+ (secure ? '; secure' : '');
+}
+
+jQuery(document).ready(function() {
+			setTimeout(function(){
+			alert('사내관리자 보안 규정에 동의합니다.');
+			setCookie("aGreeFlag", "Y", 1);
+		}, 1000);
+	});
+</script>
+
+</td>
+</tr>
+<tr><td colspan=3 height=22 bgcolor=#F2F2F2 align=right><a href='#gnuboard4_admin_head'><img src='../adm_re/img/top.gif' border=0></a>&nbsp;</td></tr>
+</table><br><br>
+<!-- <p>실행시간 : 1.0083651542664 -->
+
+<script language='javascript' src='../adm_re/admin.js'></script>
+
+<script language="javascript" src="../js/wrest.js"></script><!-- 폼 입력 필드 체크 자바스크립트 -->
+<!-- 로딩중 화면표시 스크립터 -->
+<!-- <script language="Javascript">
+waiting.style.visibility="hidden"
+</script>  -->
+<!-- 로딩중 화면표시 스크립터 끝 -->
+<script language="javaScript">
+<!--
+function openCenter(strUrl, strName, nWidth, nHeight, strFeatures) {
+		var nTop  = (screen.height - nHeight) / 2;
+		var nLeft = (screen.width - nWidth) / 2;
+
+		strFeatures += ",height="+nHeight+",width="+nWidth+",top="+nTop+",status=yes,left="+nLeft;
+		window.open(strUrl, strName, strFeatures);
+	}
+
+function testPOP(num,w,h,bar) {
+		openCenter(num, "MR", w, h, "toolbar=no,scrollbars="+bar+",titlebar=no", true);
+}
+//-->
+</script>
+<!-- 새창 대신 사용하는 iframe -->
+<iframe width=0 height=0 name='hiddenframe' style='display:none;'></iframe>
+<div style='float:left; width:px; text-align:center;'>홈페이지 속도시간 : 1.03<br></div>
+
+		</td>
+	</tr>
+</table>
+</body>
+</html>
